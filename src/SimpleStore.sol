@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: MIT
 //to tell which version we want use
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.18;
 
 // define contract
 // every smart contract have address
@@ -33,10 +33,7 @@ contract myContract {
     }
 
     function addPerson(string memory _name, uint256 _favouriteNumber) public {
-        People memory newPerson = People({
-            favouriteNumber: _favouriteNumber,
-            name: _name
-        });
+        People memory newPerson = People({favouriteNumber: _favouriteNumber, name: _name});
         people.push(newPerson);
         stringTofavNumber[_name] = _favouriteNumber;
     }
